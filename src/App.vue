@@ -1,30 +1,44 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div class="app">
+    <post-form @create="createPost"> </post-form>
+    <post-list :posts="posts"> </post-list>
   </div>
-  <router-view/>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import PostForm from "./components/PostForm.vue";
+import PostList from "./components/PostList.vue";
 
-#nav {
-  padding: 30px;
-}
+export default {
+  components: {
+    PostForm,
+    PostList,
+  },
+  data() {
+    return {
+      posts: [
+        { id: 1, title: "Javascript", body: "Описание поста" },
+        { id: 2, title: "Javascript 2", body: "Описание поста 2" },
+        { id: 3, title: "Javascript 3", body: "Описание поста 3" },
+        { id: 4, title: "Javascript 4", body: "Описание поста 4" },
+      ],
+    };
+  },
+  methods: {
+    createPost(post) {
+      this.posts.push(post);
+    },
+  },
+};
+</script>
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+<style scopped>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.app {
+  padding: 20px;
 }
 </style>
