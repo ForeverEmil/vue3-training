@@ -32,7 +32,7 @@ export default {
 };
 </script>
 
-<style scopped>
+<style scoped>
 form {
   display: flex;
   flex-direction: column;

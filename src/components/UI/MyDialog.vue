@@ -23,7 +23,7 @@ export default {
 };
 </script>
 
-<style scopped>
+<style>
 .dialog {
   top: 0;
   right: 0;

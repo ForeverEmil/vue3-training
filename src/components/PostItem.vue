@@ -21,7 +21,7 @@ export default {
 };
 </script>
 
-<style scopped>
+<style scoped>
 .post {
   padding: 15px;
   border: 2px solid teal;
