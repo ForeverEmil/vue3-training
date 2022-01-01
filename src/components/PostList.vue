@@ -11,6 +11,7 @@
     </transition-group>
   </div>
   <h2 v-else style="color: red">Список постов пуст!</h2>
+
 </template>
 
 <script>
@@ -29,16 +30,19 @@ export default {
 
 <style scoped>
 .user-list-item {
+  transition: all 0.5s;
   display: inline-block;
   margin-right: 10px;
 }
-.user-list-enter-active,
-.user-list-leave-active {
-  transition: all 0.4s ease;
-}
-.user-list-enter-from,
-.user-list-enter-to {
+.user-list-complete-enter,
+.user-list-complete-leave-to {
   opacity: 0;
   transform: translateX(130px);
+}
+.user-list-complete-leave-active{
+  position: absolute;
+}
+.user-list-move {
+  transition: transform 0.4s;
 }
 </style>
