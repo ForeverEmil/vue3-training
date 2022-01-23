@@ -18,6 +18,8 @@ export default {
 
 <style>
 .input {
+  color: #aeaeae;
+  opacity: 1;
   width: 100%;
   border: 1px solid teal;
   padding: 10px 15px;
