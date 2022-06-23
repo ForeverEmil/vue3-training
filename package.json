@@ -1,11 +1,8 @@
 {
-  "homepage": "https://foreveremil.github.io/vue3-training/",
   "name": "my-app",
   "version": "0.1.0",
   "private": false,
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
