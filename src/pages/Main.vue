@@ -1,5 +1,5 @@
 <template>
-<h1>Добро пожаловать на курс</h1>
+  <h1>Welcome to training course!</h1>
 </template>
 
 <script>
@@ -9,5 +9,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

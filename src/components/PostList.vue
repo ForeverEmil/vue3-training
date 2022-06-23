@@ -1,16 +1,11 @@
 <template>
   <div v-if="posts.length > 0">
-    <h3>Список пользователей</h3>
+    <h3>Posts list</h3>
     <transition-group name="user-list">
-      <post-item
-        v-for="post in posts"
-        :post="post"
-        :key="post.id"
-        @remove="$emit('remove', post)"
-      />
+      <post-item v-for="post in posts" :post="post" @remove="$emit('remove', post)" :key="post.id" />
     </transition-group>
   </div>
-  <h2 v-else style="color: red">Список постов пуст!</h2>
+  <h2 v-else style="color: red">Posts list is empty!</h2>
 
 </template>
 
@@ -30,18 +25,21 @@ export default {
 
 <style scoped>
 .user-list-item {
-  transition: all 0.5s;
   display: inline-block;
   margin-right: 10px;
 }
-.user-list-complete-enter,
-.user-list-complete-leave-to {
+
+.user-list-enter-active,
+.user-list-leave-active {
+  transition: all 0.4s ease;
+}
+
+.user-list-enter-from,
+.user-list-leave-to {
   opacity: 0;
   transform: translateX(130px);
 }
-.user-list-complete-leave-active{
-  position: absolute;
-}
+
 .user-list-move {
   transition: transform 0.4s;
 }

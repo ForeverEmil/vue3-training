@@ -21,7 +21,7 @@ export default {
   color: #aeaeae;
   opacity: 1;
   width: 100%;
-  border: 1px solid teal;
+  border: 1px solid #243B67;
   padding: 10px 15px;
   margin-top: 15px;
 }

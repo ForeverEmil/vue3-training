@@ -1,11 +1,12 @@
 <template>
-<div class="navbar">
-  <div @click="$router.push('/')">Vue 3</div>
-  <div class="navbar__btns">
-    <my-button @click="$router.push('/posts')">Посты</my-button>
-    <my-button style="margin-left: 15px" @click="$router.push('/about')">О нас</my-button>
+  <div class="navbar">
+    <div @click="$router.push('/')">Vue 3 Training</div>
+    <div class="navbar__btns">
+      <my-button @click="$router.push('/posts')">Posts</my-button>
+      <my-button style="margin-left: 15px" @click="$router.push('/about')">About</my-button>
+      <my-button style="margin-left: 15px" @click="$router.push('/store')">Vuex Store</my-button>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -16,7 +17,7 @@ export default {
 </script>
 
 <style scoped>
-.navbar{
+.navbar {
   height: 50px;
   background-color: lightgrey;
   box-shadow: 2px 2px 4px gray;
@@ -24,7 +25,8 @@ export default {
   align-items: center;
   padding: 0px 15px;
 }
-.navbar__btns{
+
+.navbar__btns {
   margin-left: auto;
 }
 </style>
